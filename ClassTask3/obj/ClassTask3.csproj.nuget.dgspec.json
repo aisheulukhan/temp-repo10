@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tu7hnsxs1\\Desktop\\ClassTask3\\ClassTask3\\ClassTask3\\ClassTask3.csproj": {}
+    "C:\\Users\\tu7hnsxs1\\Desktop\\New folder\\ClassTask3\\ClassTask3\\ClassTask3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tu7hnsxs1\\Desktop\\ClassTask3\\ClassTask3\\ClassTask3\\ClassTask3.csproj": {
+    "C:\\Users\\tu7hnsxs1\\Desktop\\New folder\\ClassTask3\\ClassTask3\\ClassTask3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tu7hnsxs1\\Desktop\\ClassTask3\\ClassTask3\\ClassTask3\\ClassTask3.csproj",
+        "projectUniqueName": "C:\\Users\\tu7hnsxs1\\Desktop\\New folder\\ClassTask3\\ClassTask3\\ClassTask3.csproj",
         "projectName": "ClassTask3",
-        "projectPath": "C:\\Users\\tu7hnsxs1\\Desktop\\ClassTask3\\ClassTask3\\ClassTask3\\ClassTask3.csproj",
+        "projectPath": "C:\\Users\\tu7hnsxs1\\Desktop\\New folder\\ClassTask3\\ClassTask3\\ClassTask3.csproj",
         "packagesPath": "C:\\Users\\tu7hnsxs1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tu7hnsxs1\\Desktop\\ClassTask3\\ClassTask3\\ClassTask3\\obj\\",
+        "outputPath": "C:\\Users\\tu7hnsxs1\\Desktop\\New folder\\ClassTask3\\ClassTask3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
