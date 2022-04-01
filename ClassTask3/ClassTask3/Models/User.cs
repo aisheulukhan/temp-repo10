@@ -11,6 +11,8 @@ namespace ClassTask3.Models
         private string _fullName;
         private string _email;
         public string FullName { get; set; }
+        public string Email { get; set; }
+
         public int Id
         {
             get;
@@ -29,15 +31,7 @@ namespace ClassTask3.Models
                 }
             }
         }
-        public string Email
-        {
-            get { return _email; }
-            set
-            {
-                _email = value;
-            }
-
-        }
+        
         static User()
         {
             _id = 0;
@@ -47,25 +41,16 @@ namespace ClassTask3.Models
             _id++;
             Id = _id;
         }
-        public User(string email, string password) :this()
+        public User(string fullname, string email, string password) : this()
         {
+            FullName = fullname;
             Email = email;
             Password = password;
-            
-        }
-        public User(string email, string password, ref string fullName) : this(email, password)
-        {
-            this.FullName = fullName;
         }
 
-        public void ShowInfo()
-        {
-            Console.WriteLine($" Id - {Id}");
-            Console.WriteLine($"Full Name - {FullName}");
-            Console.WriteLine($"Email - {Email}");
-            Console.WriteLine($"Password - {Password}");
-        }
-        public static bool PasswordChecker(string password)
+
+
+        public bool PasswordChecker(string password)
         {
             bool isupper = false;
             bool islower = false;
@@ -79,10 +64,17 @@ namespace ClassTask3.Models
                     else if (char.IsDigit(item)) isdigit = true;
                 }
                 if (isdigit && islower && isupper) return true;
-                
+
             }
             return false;
 
+        }
+        public void ShowInfo()
+        {
+            Console.WriteLine($" Id - {Id}");
+            Console.WriteLine($"Full Name - {FullName}");
+            Console.WriteLine($"Email - {Email}");
+            Console.WriteLine($"Password - {Password}");
         }
     }
 }

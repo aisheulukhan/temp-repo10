@@ -6,9 +6,9 @@ namespace ClassTask3.Models
 {
     class Group
     {
-        private int _groupno;
+        private string _groupno;
         private int _studentlimit;
-        public int GroupNo { get; set; }
+        public string GroupNo { get; set; }
         public int StudentLimit
         {
             get
@@ -17,18 +17,20 @@ namespace ClassTask3.Models
             }
             set
             {
-                if (value < 5 || value > 18)
+                if (value >= 5 || value <= 18)
                 {
                     _studentlimit = value;
                 }
             }
         }
+       
         private Student[] _students = new Student[0];
         public Student this[int index]
         {
             get { return _students[index]; }
             set { _students[index] = value; }
         }
+       
         public void AddStudent(Student student)
         {
             if (_students.Length < StudentLimit)
@@ -38,39 +40,44 @@ namespace ClassTask3.Models
             }
             else
             {
-                Console.WriteLine("Limiti kecdiniz!");
+                Console.WriteLine("Limit kecildi");
             }
         }
         public bool CheckGroupNo(string groupNo)
         {
-            bool isupper1 = false;
-            bool isupper2 = false;
-            bool isdigit3 = false;
-            bool isdigit4 = false;
-            bool isdigit5 = false;
-            if (groupNo.Length >= 5)
+            bool isUpper1 = false;
+            bool isUpper2 = false;
+            bool isDigit3 = false;
+            bool isDigit4 = false;
+            bool isDigit5 = false;
+            if (groupNo.Length == 5)
             {
-               
-                    if (char.IsUpper(groupNo[0])) isupper1 = true;
-                    if (char.IsUpper(groupNo[1])) isupper2 = true;
-                    if (char.IsDigit(groupNo[2])) isdigit3 = true;
-                    if (char.IsDigit(groupNo[3])) isdigit4 = true;
-                    if (char.IsDigit(groupNo[4])) isdigit5 = true;
 
-                if (isupper1 && isupper2 && isdigit3 && isdigit4 && isdigit5) return true;
+                if (char.IsUpper(groupNo[0])) isUpper1 = true;
+                else return false;
+                if (char.IsUpper(groupNo[1])) isUpper2 = true;
+                else return false;
+                if (char.IsDigit(groupNo[2])) isDigit3 = true;
+                else return false;
+                if (char.IsDigit(groupNo[3])) isDigit4 = true;
+                else return false;
+                if (char.IsDigit(groupNo[4])) isDigit5 = true;
+                else return false;
+
+                if (isUpper1 && isUpper2 && isDigit3 && isDigit4 && isDigit5) return true;
             }
             return false;
 
         }
-        public void GetStudent(int? StudentId)
+        public void GetStudent(int? StudId)
         {
-            if (StudentId != null)
+            if (StudId != null)
             {
                 foreach (Student student in _students)
                 {
-                    if (student.Id == StudentId)
+                    if (student.Id == StudId)
                     {
-                        Console.WriteLine(student);
+                        Console.WriteLine(student.FullName);
                     }
                 }
             }
@@ -79,13 +86,9 @@ namespace ClassTask3.Models
         {
             foreach (var item in _students)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(item.FullName);
             }
         }
-        public Group(int groupno, int studentlimit)
-        {
-            GroupNo = groupno;
-            StudentLimit = studentlimit;
-        }
+        
     }
 }

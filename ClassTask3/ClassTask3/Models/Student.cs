@@ -17,7 +17,7 @@ namespace ClassTask3.Models
         {
             _id = 0;
         }
-        public Student()
+        public Student(string fullname, double point)
         {
             _id++;
             Id = _id;
